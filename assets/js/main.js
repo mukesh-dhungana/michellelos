@@ -73,6 +73,7 @@ var onNavLinkClick = el => {
         $($(".home-title-div")[1]).css("transform", "translate(0, 0)");
       }, 2000);
     } else scrollToPos(moveToEl, 1500);
+    transformNavActiveScrollBar(el);
     $(".active-section").removeClass("active-section");
     moveToEl.addClass("active-section");
   }
@@ -140,7 +141,7 @@ var slideSection = (scrollTo, moveTo) => {
   var els = $("a[href='#" + moveToSection.attr("id") + "']");
   $(".nav-item.active").removeClass("active");
   els.parent().addClass("active");
-
+  transformNavActiveScrollBar(els[0]);
   //moveToSection.css("transform", "translate(0,-1081px)");
   //moveToSection.css("animation", "1s ease 0s normal forwards 1 fadein");
 
@@ -162,8 +163,8 @@ var scrollToPos = (el, duration) => {
         if (el.attr("id") === "serviceSection") {
           var offSetHeight = document.getElementsByClassName("section")[1]
             .offsetHeight;
-          $(document.body).css("overflow-y", "scroll");
-          $(document.body).css("height", +offSetHeight - 10 + "px");
+          // $(document.body).css("overflow-y", "scroll");
+          // $(document.body).css("height", +offSetHeight - 10 + "px");
         }
       }
     }
@@ -196,4 +197,20 @@ $(document).ready(() => {
   document.getElementsByClassName("section")[2].style.transform =
     "translate(" + firstElOffSetWidth * 2 + "px," + -offsetTop + "px)";
   scrollToPos($(".active-section"), 1500);
+  var activeNavItem = document
+    .getElementsByClassName("nav-item")[0]
+    .getElementsByTagName("a")[0];
+  var activeNavListWidth = activeNavItem.offsetWidth;
+  var activeNavListLeft = activeNavItem.offsetLeft;
+  $(".nav-active-bar")
+    .css("width", activeNavListWidth + 4)
+    .css("left", activeNavListLeft);
 });
+
+var transformNavActiveScrollBar = activeNavItem => {
+  var activeNavListWidth = activeNavItem.offsetWidth;
+  var activeNavListLeft = activeNavItem.offsetLeft;
+  $(".nav-active-bar")
+    .css("width", activeNavListWidth)
+    .css("left", activeNavListLeft);
+};
