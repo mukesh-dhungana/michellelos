@@ -70,6 +70,7 @@ var onNavLinkClick = el => {
         $(".services-center-fit").css("transition", "none");
         $(".services-center-fit").css("transform", "translate(0,0)");
         scrollToPos(moveToEl, 0);
+        $($(".home-title-div")[1]).css("transform", "translate(0, 0)");
       }, 2000);
     } else scrollToPos(moveToEl, 1500);
     $(".active-section").removeClass("active-section");
@@ -91,6 +92,7 @@ var slideSection = (scrollTo, moveTo) => {
   //     -offsetTop +
   //     "px)"
   // );
+
   var moveToSection = moveTo;
   if (moveToSection.attr("id") === "serviceSection") {
     $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadein");
@@ -126,6 +128,7 @@ var slideSection = (scrollTo, moveTo) => {
       $(".services-center-fit").css("transition", "none");
       $(".services-center-fit").css("transform", "translate(0,0)");
       scrollToPos(moveToSection, 0);
+      $($(".home-title-div")[1]).css("transform", "translate(0, 0)");
     }, 2000);
   } else scrollToPos(moveToSection, 1500);
   $(".active-section").removeClass("active-section");
