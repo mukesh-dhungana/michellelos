@@ -1,6 +1,13 @@
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <script src="./assets/js/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/jquery-ui.js"></script>
     <style>
       body {
         /* overflow-y: hidden; */
@@ -99,6 +106,7 @@
         height: 232px;
       }
 
+      
       .home-sub-title-div {
         position: absolute;
         top: 20vw;
@@ -391,8 +399,12 @@
       /* .section {
         transition: 2s ease;
       } */
+      .services-center-fit{
+        transition: 2s ease;
+      }
       .home-title-div {
         transition: 1s ease-in-out;
+        z-index: 100;
       }
       /* .contact-msg-icon{
         background: transparent url("assets/img/img_377947.png") 0% 0% no-repeat
@@ -427,6 +439,29 @@
       }
       p {
         margin: 0;
+      }
+      .contact-icon-msg {
+        font-size: 35px;
+        color: white;
+        padding-right: 45px;
+      }
+      .contact-icon-insta {
+        font-size: 41px;
+        color: white;
+        padding-right: 45px;
+      }
+      .footer-left-span {
+        font-size: 12px;
+        padding: 10px;
+        background: red;
+        color: white;
+        cursor: pointer;
+      }
+      .footer-right-span {
+        font-size: 12px;
+        padding: 10px;
+        background: white;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -494,11 +529,11 @@
       </div>
     </section>
     <section class="services-section section" id="serviceSection">
-      <div class="home-title-div">
+      <div class="home-title-div" style="transform: translate(15vw, 0); ">
         <p class="home-title">
           Services
         </p>
-        <p class="home-sub-title" style="padding-top:3vw">
+        <p class="home-sub-title">
           Michelle Los was created to bring you the very best brow and makeup
           experience. Relax and unwind in our state of the art studio, and leave
           looking and feeling confident, relaxed and refreshed.
@@ -604,18 +639,20 @@
       </div>
     </section>
     <section class="contact-section section" id="contactSection">
-      <div class="main-contact-div">
+      <div class="main-contact-div" style="transform: translate(15vw, 0); ">
         <div class="contact-div">
           <div><p class="contact-header">Contact</p></div>
           <div class="contact-info">
             <div class="contact-info-msg-div">
-              <div class="contact-msg-icon" style="border-radius:5px">
-                <img src="./assets/img/img_377947.png" width="49" height="49" />
-              </div>
+              <span class="contact-icon-msg"
+                ><i class="fa fa-envelope-o" aria-hidden="true"></i
+              ></span>
               <p class="contact-msg-text">Michelle@Michellelos.com</p>
             </div>
             <div class="contact-info-insta-div">
-              <div class="contact-insta-icon"></div>
+              <span class="contact-icon-insta"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+              ></span>
               <p class="contact-insta-text">@MichellelosBeautyartist</p>
             </div>
           </div>
@@ -648,9 +685,15 @@
       </div>
     </section>
     <div class="footer">
-      <div class="footer-left-btn" onclick="scrollHorizontal('left')"></div>
+      <span class="footer-left-span" onclick="scrollHorizontal('left')"
+        ><i class="fa fa-chevron-left" aria-hidden="true"></i
+      ></span>
+      <span class="footer-right-span" onclick="scrollHorizontal('right')"
+        ><i class="fa fa-chevron-right" aria-hidden="true"></i
+      ></span>
+      <!-- <div class="footer-left-btn" onclick="scrollHorizontal('left')"></div>
 
-      <div class="footer-right-btn" onclick="scrollHorizontal('right')"></div>
+      <div class="footer-right-btn" onclick="scrollHorizontal('right')"></div> -->
     </div>
     <script src="./assets/js/main.js"></script>
   </body>

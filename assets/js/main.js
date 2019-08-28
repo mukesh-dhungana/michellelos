@@ -31,18 +31,49 @@ var onNavLinkClick = el => {
         ? "left"
         : "right";
     var moveToEl = $($(el).attr("href"));
+    if (moveToEl.attr("id") === "serviceSection") {
+      $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadein");
+    }
     $(".active-section").attr("id") === "serviceSection"
       ? $(document.body).css("overflow-y", "hidden")
       : "";
-    transformInnerContent($(".active-section"), 1, scrollTo);
-    transformInnerContent(moveToEl, 1.5, scrollTo);
+    transformInnerContent($(".active-section"), 1.5, scrollTo, 15);
+    transformInnerContent(moveToEl, 2, scrollTo, 0);
     $(".nav-item.active").removeClass("active");
     $(el)
       .parent()
       .addClass("active");
+
+    if (
+      $(".active-section").attr("id") === "serviceSection" &&
+      window.scrollY > 0
+    ) {
+      var offSetWidth = document.getElementsByClassName("section")[1]
+        .offsetWidth;
+      $(".services-center-fit").css("transition", "2s ease");
+      $(".services-center-fit").css(
+        "transform",
+        "translate(" +
+          (scrollTo === "left" ? offSetWidth : -offSetWidth) +
+          "px,0)"
+      );
+      $(".active-section")
+        .find(".home-title-div")
+        .css(
+          "transform",
+          "translate(" +
+            (scrollTo === "right" ? -offSetWidth + "px" : offSetWidth + "px") +
+            ", 0)"
+        );
+      $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadeout");
+      setTimeout(() => {
+        $(".services-center-fit").css("transition", "none");
+        $(".services-center-fit").css("transform", "translate(0,0)");
+        scrollToPos(moveToEl, 0);
+      }, 2000);
+    } else scrollToPos(moveToEl, 1500);
     $(".active-section").removeClass("active-section");
     moveToEl.addClass("active-section");
-    scrollToPos(moveToEl);
   }
   //slideSection(scrollTo, moveToEl);
 };
@@ -61,17 +92,48 @@ var slideSection = (scrollTo, moveTo) => {
   //     "px)"
   // );
   var moveToSection = moveTo;
-  transformInnerContent($(".active-section"), 1, scrollTo);
+  if (moveToSection.attr("id") === "serviceSection") {
+    $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadein");
+  }
+  transformInnerContent($(".active-section"), 1.5, scrollTo, 15);
   $(".active-section").attr("id") === "serviceSection"
     ? $(document.body).css("overflow-y", "hidden")
     : "";
+  $(".active-section").css("transition", " 1s ease-out");
+
+  if (
+    $(".active-section").attr("id") === "serviceSection" &&
+    window.scrollY > 0
+  ) {
+    var offSetWidth = document.getElementsByClassName("section")[1].offsetWidth;
+    $(".services-center-fit").css("transition", "2s ease");
+    $(".services-center-fit").css(
+      "transform",
+      "translate(" +
+        (scrollTo === "left" ? offSetWidth : -offSetWidth) +
+        "px,0)"
+    );
+    $(".active-section")
+      .find(".home-title-div")
+      .css(
+        "transform",
+        "translate(" +
+          (scrollTo === "right" ? -offSetWidth + "px" : offSetWidth + "px") +
+          ", 0)"
+      );
+    $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadeout");
+    setTimeout(() => {
+      $(".services-center-fit").css("transition", "none");
+      $(".services-center-fit").css("transform", "translate(0,0)");
+      scrollToPos(moveToSection, 0);
+    }, 2000);
+  } else scrollToPos(moveToSection, 1500);
   $(".active-section").removeClass("active-section");
   moveToSection.addClass("active-section");
-  scrollToPos(moveToSection);
   // offsetTop = document.getElementsByClassName("active-section")[0].offsetTop;
   // $(".active-section").css("transform", "translate(0," + -offsetTop + "px)");
-  //$(".active-section").css("transition", " 1s ease-out");
-  transformInnerContent($(".active-section"), 1.5, scrollTo);
+  $(".active-section").css("transition", " 2s ease-in");
+  transformInnerContent($(".active-section"), 2, scrollTo, 0);
   var els = $("a[href='#" + moveToSection.attr("id") + "']");
   $(".nav-item.active").removeClass("active");
   els.parent().addClass("active");
@@ -82,39 +144,42 @@ var slideSection = (scrollTo, moveTo) => {
   //moveToSection.removeClass("hide-section");
 };
 
-var scrollToPos = el => {
+var scrollToPos = (el, duration) => {
   $("html, body").animate(
     {
       scrollLeft: el.offset().left,
       scrollTop: el.offset().top
     },
     {
-      duration: 1500,
+      duration,
       specialEasing: {
-        width: "linear",
-        height: "easeOutBounce"
+        scrollLeft: "easeInQuart"
       },
       complete: function() {
         if (el.attr("id") === "serviceSection") {
           var offSetHeight = document.getElementsByClassName("section")[1]
             .offsetHeight;
           $(document.body).css("overflow-y", "scroll");
-          $(document.body).css("height", +offSetHeight-10 + "px");
+          $(document.body).css("height", +offSetHeight - 10 + "px");
         }
       }
     }
   );
 };
-var transformInnerContent = (el, delay, scrollTo) => {
+var transformInnerContent = (el, delay, scrollTo, scrollPos) => {
   el.find(".home-title-div").css("transition", "" + delay + "s ease-in-out");
   el.find(".main-contact-div").css("transition", "" + delay + "s ease-in-out");
   el.find(".home-title-div").css(
     "transform",
-    "translate(" + (scrollTo === "right" ? "-8vw" : "0") + ", 0)"
+    "translate(" +
+      (scrollTo === "right" ? -scrollPos + "vw" : scrollPos + "vw") +
+      ", 0)"
   );
   el.find(".main-contact-div").css(
     "transform",
-    "translate(" + (scrollTo === "right" ? "-8vw" : "0") + ", 0)"
+    "translate(" +
+      (scrollTo === "right" ? -scrollPos + "vw" : scrollPos + "vw") +
+      ", 0)"
   );
 };
 
@@ -127,5 +192,5 @@ $(document).ready(() => {
   offsetTop = document.getElementsByClassName("section")[2].offsetTop;
   document.getElementsByClassName("section")[2].style.transform =
     "translate(" + firstElOffSetWidth * 2 + "px," + -offsetTop + "px)";
-  scrollToPos($(".active-section"));
+  scrollToPos($(".active-section"), 1500);
 });

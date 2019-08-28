@@ -1,0 +1,75 @@
+@media screen and (max-width: 1599px) and (min-width: 992px) {
+  .contact-header {
+    font: Bold 30px/78px Didot !important;
+  }
+  .contact-msg-text,
+  .contact-insta-text {
+    font: normal 15px/80px Didot !important;
+    height: 55px;
+  }
+  .contact-icon-msg {
+    font-size: 30px !important;
+  }
+  .contact-icon-insta {
+    font-size: 35px !important;
+  }
+  .form-div input {
+    font-size: 12px !important;
+    padding: 10px 0 !important;
+    width: 205px !important;
+  }
+  .label-txt {
+    font: 400 12px Arial !important;
+  }
+  .form-btn {
+    font-size: 12px !important;
+  }
+  .contact-info-msg-div,
+  .contact-info-insta-div {
+    align-items: flex-end !important;
+  }
+  .nav-item {
+    font-size: 13px !important;
+  }
+  .menu-bar,
+  .logo {
+    top: 25px !important;
+  }
+  .contact-div {
+    top: 28vh;
+  }
+  .home-title-div {
+    top: 17vw !important;
+    width: 450px !important;
+  }
+  .home-title {
+    font: Bold 30px/78px Didot !important;
+  }
+  .home-sub-title {
+    font-size: 13px !important;
+  }
+  .insta-img {
+    width: 230px !important;
+    height: 230px !important;
+  }
+  .insta-img-text {
+    width: 230px !important;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1600px) {
+  .footer-left-span,
+  .footer-right-span {
+    font-size: 20px !important;
+    padding: 13px !important;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .footer-left-span,
+  .footer-right-span {
+    font-size: 27px !important;
+    padding: 20px !important;
+  }
+}
