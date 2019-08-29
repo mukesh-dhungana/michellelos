@@ -27,7 +27,7 @@ var onNavLinkClick = el => {
             .parent()
             .attr("aria-label")
         ) >
-      0
+        0
         ? "left"
         : "right";
     var moveToEl = $($(el).attr("href"));
@@ -54,16 +54,16 @@ var onNavLinkClick = el => {
       $(".services-center-fit").css(
         "transform",
         "translate(" +
-          (scrollTo === "left" ? offSetWidth : -offSetWidth) +
-          "px,0)"
+        (scrollTo === "left" ? offSetWidth : -offSetWidth) +
+        "px,0)"
       );
       $(".active-section")
         .find(".home-title-div")
         .css(
           "transform",
           "translate(" +
-            (scrollTo === "right" ? -offSetWidth + "px" : offSetWidth + "px") +
-            ", 0)"
+          (scrollTo === "right" ? -offSetWidth + "px" : offSetWidth + "px") +
+          ", 0)"
         );
       $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadeout");
       setTimeout(() => {
@@ -113,16 +113,16 @@ var slideSection = (scrollTo, moveTo) => {
     $(".services-center-fit").css(
       "transform",
       "translate(" +
-        (scrollTo === "left" ? offSetWidth : -offSetWidth) +
-        "px,0)"
+      (scrollTo === "left" ? offSetWidth : -offSetWidth) +
+      "px,0)"
     );
     $(".active-section")
       .find(".home-title-div")
       .css(
         "transform",
         "translate(" +
-          (scrollTo === "right" ? -offSetWidth + "px" : offSetWidth + "px") +
-          ", 0)"
+        (scrollTo === "right" ? -offSetWidth + "px" : offSetWidth + "px") +
+        ", 0)"
       );
     $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadeout");
     setTimeout(() => {
@@ -159,7 +159,7 @@ var scrollToPos = (el, duration) => {
       specialEasing: {
         scrollLeft: "easeInQuart"
       },
-      complete: function() {
+      complete: function () {
         if (el.attr("id") === "serviceSection") {
           var offSetHeight = document.getElementsByClassName("section")[1]
             .offsetHeight;
@@ -176,14 +176,14 @@ var transformInnerContent = (el, delay, scrollTo, scrollPos) => {
   el.find(".home-title-div").css(
     "transform",
     "translate(" +
-      (scrollTo === "right" ? -scrollPos + "vw" : scrollPos + "vw") +
-      ", 0)"
+    (scrollTo === "right" ? -scrollPos + "vw" : scrollPos + "vw") +
+    ", 0)"
   );
   el.find(".main-contact-div").css(
     "transform",
     "translate(" +
-      (scrollTo === "right" ? -scrollPos + "vw" : scrollPos + "vw") +
-      ", 0)"
+    (scrollTo === "right" ? -scrollPos + "vw" : scrollPos + "vw") +
+    ", 0)"
   );
 };
 
@@ -215,16 +215,23 @@ var transformNavActiveScrollBar = activeNavItem => {
     .css("left", activeNavListLeft);
 };
 
-var sendMail=()=>{
-//   Email.send({
-//     Host : "smtp.elasticemail.com",
-//     Username : "mukesh@rigonepal.com",
-//     Password : "9841a785-3679-45be-b5a4-32c21711f28e",
-//     To : 'dhunganamukesh0702@gmail.com',
-//     From : "mukesh@rigonepal.com",
-//     Subject : "This is the subject",
-//     Body : "And this is the body"
-// }).then(
-//   message => alert(message)
-// );
-}
+
+$("#contactForm").on("submit",
+  function (e) {
+    e.preventDefault();
+    var formData = $("#contactForm").serializeArray();
+    //   Email.send({
+    //     Host : "smtp.elasticemail.com",
+    //     Username : "mukesh@rigonepal.com",
+    //     Password : "9841a785-3679-45be-b5a4-32c21711f28e",
+    //     To : 'dhunganamukesh0702@gmail.com',
+    //     From : formData.filter(x=>x.name==='Email')[0].value,
+    //     Subject : "This is the subject",
+    //     Body : formData.filter(x=>x.name==='Message')[0].value+'<br /><br /><br />'+
+    //           formData.filter(x=>x.name==='Name')[0].value+'<br />'+
+    //           formData.filter(x=>x.name==='PhoneNumber')[0].value
+    // }).then(
+    //   message => alert(message)
+    // );
+
+  });
