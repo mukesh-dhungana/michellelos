@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/responsive.css" />
     <script src="./assets/js/jquery-1.12.4.min.js"></script>
     <script src="./assets/js/jquery-ui.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <style>
       body {
         /* overflow-y: hidden; */
@@ -310,9 +312,9 @@
         width: 51vw;
         position: absolute;
       }
-      .form-row {
+      .form-row:not(:nth-child(1)) {
         /* display: flex; */
-        justify-content: space-between;
+        /* justify-content: space-between; */
         padding-top: 5vh;
       }
 
@@ -334,6 +336,7 @@
         color: #fff;
         font-size: 15px;
         border-radius: 25px;
+        cursor: pointer;
       }
       .form-btn-div {
         display: flex;
@@ -413,7 +416,8 @@
         background: transparent url("assets/img/Group 19.png") 0% 0% no-repeat
           padding-box;
       }
-      .form-div input {
+      .form-div input,
+      .form-div textarea {
         padding: 15px 0;
         width: 273px;
         background: none;
@@ -423,8 +427,15 @@
         font-size: 20px;
         color: #707070;
       }
-      .form-div input:focus {
+      .form-div textarea {
+        height: 20vh;
+      }
+      .form-div input:focus,
+      .form-div textarea:focus,.form-btn:focus {
         outline: none;
+      }
+      .form-btn:hover{
+        background: #dd4f4f;
       }
       .page {
         box-sizing: border-box;
@@ -671,29 +682,32 @@
           </div>
         </div>
         <div class="form-div">
-          <div class="page">
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Phone Number" />
-            <input type="text" placeholder="Email" />
-          </div>
+          <form>
+            <div class="page form-row">
+              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Phone Number" />
+              <input type="text" placeholder="Email" />
+            </div>
 
-          <div class="form-row">
-            <div class="label-txt-div">
-              <label class="label-txt">Your Message</label>
+            <div class="form-row">
+              <textarea type="text" placeholder="Your Message"></textarea>
+              <!-- <div class="label-txt-div">
+                <label class="label-txt">Your Message</label>
+              </div>
+              <div>
+                <label class="field a-field a-field_a1 page__field">
+                  <input
+                    class="field__input a-field__input"
+                    placeholder=" "
+                    required
+                  />
+                </label>
+              </div> -->
             </div>
-            <div>
-              <label class="field a-field a-field_a1 page__field">
-                <input
-                  class="field__input a-field__input"
-                  placeholder=" "
-                  required
-                />
-              </label>
+            <div class="form-row form-btn-div">
+              <button type="button" class="form-btn" onclick="sendMail()">Send</button>
             </div>
-          </div>
-          <div class="form-row form-btn-div">
-            <button type="button" class="form-btn">Send</button>
-          </div>
+          </form>
         </div>
       </div>
     </section>

@@ -18,6 +18,10 @@
     padding: 10px 0 !important;
     width: 205px !important;
   }
+  .form-div textarea {
+    font-size: 12px !important;
+    width: 205px !important;
+  }
   .label-txt {
     font: 400 12px Arial !important;
   }
@@ -58,7 +62,14 @@
   }
 }
 
-@media screen and (max-width: 1920px) and (min-width: 1600px) {
+@media screen and (max-width: 1600px) and (min-width: 1600px) {
+  .form-div input,
+  .form-div textarea {
+    width: 250px !important;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1599px) {
   .footer-left-span,
   .footer-right-span {
     font-size: 20px !important;
