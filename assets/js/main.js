@@ -216,15 +216,15 @@ var transformNavActiveScrollBar = activeNavItem => {
 };
 
 var sendMail=()=>{
-  Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "mukesh@rigonepal.com",
-    Password : "9841a785-3679-45be-b5a4-32c21711f28e",
-    To : 'mukesh@rigonepal.com',
-    From : "mukesh@rigonepal.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
+//   Email.send({
+//     Host : "smtp.elasticemail.com",
+//     Username : "mukesh@rigonepal.com",
+//     Password : "9841a785-3679-45be-b5a4-32c21711f28e",
+//     To : 'dhunganamukesh0702@gmail.com',
+//     From : "mukesh@rigonepal.com",
+//     Subject : "This is the subject",
+//     Body : "And this is the body"
+// }).then(
+//   message => alert(message)
+// );
 }
