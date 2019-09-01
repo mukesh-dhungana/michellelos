@@ -188,7 +188,7 @@
         top: 7.7vh!important;
     }
     
-    .home-section .home-title-div {
+    .home-title-div {
         left: 20vw!important;
         top: 23vh!important;
         width: 51vw!important;
@@ -203,9 +203,75 @@
         font-size: 1.5vh!important;
     }
     
+    .services-section .home-title-div {
+        left: 15vw!important;
+    }
+    
     .home-center-fit {
         margin-left: 20vw!important;
         width: 80%!important;
         object-fit: scale-down!important;
+    }
+    
+    .insta-img-first-row,
+    .insta-img-second-row {
+        display: block;
+    }
+    
+    .insta-content {
+        display: flex;
+        justify-content: space-between;
+        width: 10vw;
+    }
+    
+    .insta-img,
+    .insta-img-text {
+        width: 33vw!important;
+    }
+    
+    .insta-img-first-row div,
+    .insta-img-second-row div {
+        padding-bottom: 2vh;
+    }
+    
+    .insta-header-text {
+        font: Bold 20px/53px Didot!important;
+    }
+    
+    .insta-icon {
+        width: 32px!important;
+        object-fit: scale-down;
+    }
+    
+    .contact-div {
+        top: 25vh!important;
+        left: 11vw!important;
+        display: block!important;
+        width: 70vw!important;
+    }
+    
+    .form-div {
+        left: 11vw!important;
+        width: 70vw!important;
+    }
+    
+    .contact-header {
+        height: 6vh!important;
+        font: Bold 5vh/7vh Didot!important;
+    }
+    
+    .contact-msg-text,
+    .contact-insta-text {
+        font: normal 2.5vh/8vh Didot!important;
+    }
+    
+    .contact-icon-msg,
+    .contact-icon-insta {
+        padding-right: 2.1vw!important;
+    }
+    
+    .form-div input,
+    .form-div textarea {
+        width: 20vw!important;
     }
 }
