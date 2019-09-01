@@ -219,4 +219,7 @@ window.onload = function() {
     document.getElementsByClassName("section")[2].style.transform =
         "translate(" + firstElOffSetWidth * 2 + "px," + -offsetTop + "px)";
     scrollToPos($(".active-section"), 1500);
+
+    var activeLi = document.getElementsByClassName('nav-item active')[0];
+    $('.nav-active-bar').css('top', activeLi.offsetTop + activeLi.offsetHeight + 10 + 'px');
 };

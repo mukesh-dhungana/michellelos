@@ -130,7 +130,7 @@
     min-height: 500px !important;
   }
 } */
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
     .menu-bar ul {
         justify-content: space-around;
         padding: 0!important;
@@ -139,10 +139,6 @@
     
     .nav-item {
         width: unset!important
-    }
-    
-    .nav-active-bar {
-        top: 9vh!important;
     }
     
     .home-title-div {
@@ -195,6 +191,11 @@
         font: normal 2.5vh/8vh Didot!important;
     }
 }
+@media screen and (max-width: 1199px) and (min-width:769px) {
+    .nav-active-bar {
+        top: 9vh!important;
+    }
+}
 @media (max-width: 767px) {
     .logo {
         object-fit: scale-down;
@@ -217,10 +218,9 @@
     .nav-item {
         width: unset!important
     }
-    
-    .nav-active-bar {
+    /* .nav-active-bar {
         top: 7.7vh!important;
-    }
+    } */
     
     .home-title-div {
         left: 20vw!important;
