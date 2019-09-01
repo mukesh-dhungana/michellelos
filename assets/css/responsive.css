@@ -1,5 +1,5 @@
 @media screen and (max-width: 1599px) and (min-width: 992px) {
-  /* .contact-header {
+    /* .contact-header {
     font: Bold 30px/78px Didot !important;
   }
   .contact-msg-text,
@@ -7,45 +7,59 @@
     font: normal 15px/80px Didot !important;
     height: 55px;
   } */
-  .contact-icon-msg {
-    font-size: 30px !important;
-  }
-  .contact-icon-insta {
-    font-size: 35px !important;
-  }
-  /* .form-div input {
+    .contact-icon-msg {
+        font-size: 30px !important;
+    }
+    .contact-icon-insta {
+        font-size: 35px !important;
+    }
+    /* .form-div input {
     font-size: 12px !important;
     /* padding: 10px 0 !important;
     width: 205px !important; */
-  } */
-  .form-div textarea {
+}
+
+*/ .form-div textarea {
     font-size: 12px !important;
     width: 205px !important;
-  }
-  .label-txt {
+}
+
+.label-txt {
     font: 400 12px Arial !important;
-  }
-  /* .form-btn {
+}
+
+
+/* .form-btn {
     font-size: 12px !important;
   } */
-  /* .contact-info-msg-div,
+
+
+/* .contact-info-msg-div,
   .contact-info-insta-div {
     align-items: flex-end !important;
   } */
-  /* .nav-item {
+
+
+/* .nav-item {
     font-size: 13px !important;
   } */
-  /* .menu-bar,
+
+
+/* .menu-bar,
   .logo {
     top: 25px !important;
   } */
-  .contact-div {
+
+.contact-div {
     top: 28vh;
-  }
-  .home-sub-title {
+}
+
+.home-sub-title {
     padding: 0!important;
-  } 
-  /* .home-title-div {
+}
+
+
+/* .home-title-div {
     top: 25vh !important;
     width: 450px !important;
   }
@@ -57,40 +71,44 @@
     letter-spacing: 0.04rem!important;
     padding: 0!important;
   } */
-  /* .insta-img {
+
+
+/* .insta-img {
     width: 230px !important;
     height: 230px !important;
   } */
-  /* .insta-img-text {
+
+
+/* .insta-img-text {
     width: 230px !important;
     font-size: 13px;
   } */
-  .inner-header-service-section{
+
+.inner-header-service-section {
     font: Bold 18px/78px Didot;
-  }
 }
 
+
+}
 @media screen and (max-width: 1600px) and (min-width: 1600px) {
-  /* .form-div input,
+    /* .form-div input,
   .form-div textarea {
     width: 250px !important;
   } */
 }
-
 @media screen and (max-width: 1920px) and (min-width: 1599px) {
-  .footer-left-span,
-  .footer-right-span {
-    font-size: 20px !important;
-    padding: 13px !important;
-  }
+    .footer-left-span,
+    .footer-right-span {
+        font-size: 20px !important;
+        padding: 13px !important;
+    }
 }
-
 @media screen and (min-width: 1921px) {
-  .footer-left-span,
-  .footer-right-span {
-    font-size: 27px !important;
-    padding: 20px !important;
-  }
+    .footer-left-span,
+    .footer-right-span {
+        font-size: 27px !important;
+        padding: 20px !important;
+    }
 }
 
 /* @media screen and (max-width: 2400px) and (min-width: 1599px) {
@@ -111,3 +129,83 @@
     min-height: 500px !important;
   }
 } */
+@media (max-width: 1199px) {
+    .menu-bar ul {
+        justify-content: space-around;
+        padding: 0!important;
+        width: 53vw;
+    }
+    
+    .nav-item {
+        width: unset!important
+    }
+    
+    .nav-active-bar {
+        top: 9vh!important;
+    }
+    
+    .home-section .home-title-div {
+        top: 25vh!important;
+        width: 44vw!important;
+    }
+    
+    .home-title {
+        font: Bold 6vh/6.8vh Didot;
+    }
+    
+    .home-sub-title {
+        padding: 2vh 0!important;
+    }
+    
+    .home-center-fit {
+        object-fit: scale-down!important;
+    }
+}
+@media (max-width: 767px) {
+    .logo {
+        object-fit: scale-down;
+        width: 100px!important;
+        height: unset!important;
+    }
+    
+    .menu-bar {
+        height: 10vh!important;
+        left: 0vw!important;
+        top: 9.5vh!important;
+    }
+    
+    .menu-bar ul {
+        justify-content: space-around;
+        padding: 3px!important;
+        width: 368px;
+    }
+    
+    .nav-item {
+        width: unset!important
+    }
+    
+    .nav-active-bar {
+        top: 7.7vh!important;
+    }
+    
+    .home-section .home-title-div {
+        left: 20vw!important;
+        top: 23vh!important;
+        width: 51vw!important;
+    }
+    
+    .home-title {
+        font: Bold 4vh/5.5vh Didot!important;
+    }
+    
+    .home-sub-title {
+        padding: 3vw 0!important;
+        font-size: 1.5vh!important;
+    }
+    
+    .home-center-fit {
+        margin-left: 20vw!important;
+        width: 80%!important;
+        object-fit: scale-down!important;
+    }
+}
