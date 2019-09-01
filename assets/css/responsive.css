@@ -84,9 +84,10 @@
     font-size: 13px;
   } */
 
-.inner-header-service-section {
+
+/* .inner-header-service-section {
     font: Bold 18px/78px Didot;
-}
+} */
 
 
 }
@@ -144,9 +145,13 @@
         top: 9vh!important;
     }
     
-    .home-section .home-title-div {
+    .home-title-div {
         top: 25vh!important;
         width: 44vw!important;
+    }
+    
+    .services-section .home-title-div {
+        left: 15vw!important;
     }
     
     .home-title {
@@ -159,6 +164,35 @@
     
     .home-center-fit {
         object-fit: scale-down!important;
+    }
+    
+    .insta-img,
+    .insta-img-text {
+        width: 17vw !important;
+        font-size: 1.5vh;
+    }
+    
+    .main-contact-div {
+        left: 0!important;
+    }
+    
+    .contact-div,
+    .form-div {
+        left: 16vw!important;
+        width: 69vw!important;
+    }
+    
+    .contact-header {
+        font: Bold 5vh/7vh Didot!important;
+    }
+    
+    .contact-info {
+        width: unset!important;
+    }
+    
+    .contact-msg-text,
+    .contact-insta-text {
+        font: normal 2.5vh/8vh Didot!important;
     }
 }
 @media (max-width: 767px) {
