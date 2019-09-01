@@ -191,11 +191,12 @@
         font: normal 2.5vh/8vh Didot!important;
     }
 }
-@media screen and (max-width: 1199px) and (min-width:769px) {
+
+/* @media screen and (max-width: 1199px) and (min-width:1024px) {
     .nav-active-bar {
         top: 9vh!important;
     }
-}
+} */
 @media (max-width: 767px) {
     .logo {
         object-fit: scale-down;
