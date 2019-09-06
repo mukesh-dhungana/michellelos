@@ -3,13 +3,15 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    background: transparent linear-gradient(180deg, #131212 0%, #131212 59%, #131212 100%) 0% 0% no-repeat padding-box;
+    /* background: transparent linear-gradient(180deg, #131212 0%, #131212 59%, #131212 100%) 0% 0% no-repeat padding-box; */
+    background: #000000 0% 0% no-repeat padding-box;
 }
 
 .imgbox {
     display: grid;
-    background: transparent linear-gradient(180deg, #131212 0%, #131212 59%, #131212 100%) 0% 0% no-repeat padding-box;
+    /* background: transparent linear-gradient(180deg, #131212 0%, #131212 59%, #131212 100%) 0% 0% no-repeat padding-box; */
     opacity: 1;
+    background: #000000 0% 0% no-repeat padding-box;
 }
 
 .home-center-fit {
@@ -33,12 +35,13 @@ body {
 .logo {
     top: 2.5vh;
     left: 12vw;
-    width: 197px;
-    height: 113px;
+    width: 13vw;
+    height: auto;
     /* background: transparent url("../img/Company Logo.png") 0% 0%
     no-repeat padding-box; */
     opacity: 1;
     position: absolute;
+    object-fit: cover;
 }
 
 @font-face {
@@ -85,7 +88,7 @@ body {
     text-align: left;
     font: Bold 6vh/7.8vh Didot;
     letter-spacing: 0;
-    color: #ffffff;
+    color: #DDDDDD;
     text-transform: capitalize;
     opacity: 1;
 }
@@ -117,7 +120,7 @@ body {
     text-align: left;
     font-family: ProximaNovaThin;
     letter-spacing: 0.06rem;
-    color: #ffffff;
+    color: #DDDDDD;
     opacity: 1;
     padding-top: 1vw;
     font-size: 1.65vh;
@@ -251,7 +254,7 @@ body {
     text-align: left;
     font: Bold 6vh/7vh Didot;
     letter-spacing: 0;
-    color: #ffffff;
+    color: #DDDDDD;
     opacity: 1;
 }
 
@@ -281,12 +284,12 @@ body {
     text-decoration: underline;
     font: normal 3vh/8vh Didot;
     letter-spacing: 0;
-    color: #ffffff;
+    color: #DDDDDD;
     opacity: 1;
 }
 
 .contact-section {
-    background: #131313 0% 0% no-repeat padding-box;
+    background: #000000 0% 0% no-repeat padding-box;
     opacity: 1;
     transform: translate(197.6vw, -357vh);
     width: 100%;
@@ -431,9 +434,9 @@ body {
   transition: 2s ease;
 } */
 
-.services-center-fit {
+/* .services-center-fit {
     transition: 2s ease;
-}
+} */
 
 .home-title-div {
     transition: 1s ease-in-out;
@@ -456,14 +459,19 @@ body {
     width: 16vw;
     background: none;
     border: none;
-    border-bottom: 0.15vh solid white;
+    border-bottom: 0.15vh solid #DDDDDD;
     text-align: left;
     font-size: 1.5vh;
-    color: #707070;
+    color: #DDDDDD;
 }
 
 .form-div textarea {
     height: 20vh;
+}
+
+.form-div input::placeholder,
+.form-div textarea::placeholder {
+    color: #DDDDDD;
 }
 
 .form-div input:focus,
@@ -521,7 +529,7 @@ p {
 
 .nav-active-bar {
     position: absolute;
-    background: red;
+    background:#AC0000;
     height: 0.2vh;
     top: 99px;
     transition: 2s ease;
