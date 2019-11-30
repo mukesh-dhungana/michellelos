@@ -54,9 +54,9 @@
     top: 28vh;
 }
 
-.home-sub-title {
+/* .home-sub-title {
     padding: 0!important;
-}
+} */
 
 
 /* .home-title-div {
@@ -142,7 +142,7 @@
     }
     
     .home-title-div {
-        top: 25vh!important;
+        top: 12vh;
         width: 44vw!important;
     }
     
@@ -159,7 +159,10 @@
     }
     
     .home-center-fit {
-        object-fit: scale-down!important;
+        margin-left: 0;
+        width: 100vw;
+        object-fit: scale-down;
+        height:100vh ;
     }
     
     .insta-img,
@@ -189,6 +192,13 @@
     .contact-msg-text,
     .contact-insta-text {
         font: normal 2.5vh/8vh Didot!important;
+    }
+    .insta-feed{
+        padding: 5vh 5vh 0 14vw;
+    }
+    .services-center-fit{
+        height:100vh!important ;
+        object-fit: scale-down;
     }
 }
 
@@ -242,12 +252,20 @@
         left: 15vw!important;
     }
     
+    .insta-feed{
+        padding: 5vh 5vh 0 14vw;
+    }
     .home-center-fit {
-        margin-left: 20vw!important;
-        width: 80%!important;
-        object-fit: scale-down!important;
+        margin-left: 0;
+        width: 100vw;
+        object-fit: scale-down;
+        height:100vh ;
     }
     
+    .services-center-fit{
+        height:100vh ;
+        object-fit: scale-down;
+    }
     .insta-img-first-row,
     .insta-img-second-row {
         display: block;
