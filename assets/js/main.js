@@ -21,8 +21,6 @@ var onNavLinkClick = el => {
       .hasClass("active")
   ) {
     $('.active-section').find('img').css('transform', 'scale(1.1)');
-    $(el).find('img').css('transform', 'scale(1)');
-    console.log( $(el));
     var scrollTo =
       parseInt($(".nav-item.active").attr("aria-label")) -
         parseInt(
@@ -34,7 +32,7 @@ var onNavLinkClick = el => {
         ? "left"
         : "right";
     var moveToEl = $($(el).attr("href"));
-    $('#'+moveToEl.attr("id")).find('img').css('transform', 'scale(1)');
+    $('#' + moveToEl.attr("id")).find('img').css('transform', 'scale(1)');
     if (moveToEl.attr("id") === "serviceSection") {
       $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadein");
     }
@@ -97,8 +95,9 @@ var slideSection = (scrollTo, moveTo) => {
   //     -offsetTop +
   //     "px)"
   // );
-
+  $('.active-section').find('img').css('transform', 'scale(1.1)');
   var moveToSection = moveTo;
+  $('#' + moveToSection.attr("id")).find('img').css('transform', 'scale(1)');
   if (moveToSection.attr("id") === "serviceSection") {
     $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadein");
   }
