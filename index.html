@@ -23,13 +23,16 @@
           <a href="#homeSection" onclick="onNavLinkClick(this);return false;">Home</a>
         </li>
         <li class="nav-item" aria-label="2">
-          <a href="#serviceSection" onclick="onNavLinkClick(this);return false;">Services</a>
+          <a href="#bioSection" onclick="onNavLinkClick(this);return false;">Bio</a>
         </li>
         <li class="nav-item" aria-label="3">
-          <a href="#contactSection" onclick="onNavLinkClick(this);return false;">Contact</a>
+          <a href="#serviceSection" onclick="onNavLinkClick(this);return false;">Services</a>
         </li>
         <li class="nav-item" aria-label="4">
-          <a href="#" onclick="return false;">Book Now</a>
+          <a href="#contactSection" onclick="onNavLinkClick(this);return false;">Contact</a>
+        </li>
+        <li class="nav-item" aria-label="5">
+          <a href="#" onclick="return false;">Online Booking</a>
         </li>
       </ul>
       <div class="nav-active-bar"></div>
@@ -56,7 +59,7 @@
     </div>
 
     <div class="imgbox">
-      <img class="home-center-fit" src="./assets/img/Michelle-209@2x.png" />
+      <img class="home-center-fit background-img" src="./assets/img/Michelle-209@2x.png" />
       <div class="insta-feed">
         <div class="insta-header">
           <div><img class="insta-icon" src="./assets/img/Group 19.png" /></div>
@@ -127,7 +130,8 @@
       </div>
     </div>
   </section>
-  <section class="services-section section" id="serviceSection">
+
+  <section class="bio-section section" id="bioSection">
     <div class="home-title-div" style="transform: translate(15vw, 0); ">
       <p class="home-sub-title">
         Michelle Los is a Toronto based Eyebrow and Makeup Artist, specializing in eyebrow threading
@@ -147,11 +151,19 @@
         Michelle is now offering services from the comfort of her private studio in the Wallace & Geary
         Ave neighbourhood of Toronto.
       </p>
+    </div>
+    <div class="imgbox">
+      <img class="services-center-fit background-img" src="./assets/img/Michelle-210@2x.png" />
+    </div>
+  </section>
+
+  <section class="services-section section" id="serviceSection">
+    <div class="home-title-div" style="transform: translate(15vw, 0); ">
       <p class="home-title">
         Services
       </p>
-      <p class="home-sub-title">
-        <span class="inner-header-service-section">Threading:</span><br />
+      <p class="home-sub-title title">
+        <span class="inner-header-service-section">Threading:</span>
         <span class="inner-body">
           Whether it’s to refine and polish your eyebrows, or add that extra freshness to your cheeks &
           jawline, Michelle delivers a threading experience that is surprisingly gentle and extremely
@@ -176,8 +188,8 @@
         before & after every session, and to ensure the greatest comfort and best results throughout the
         process.
       </p>
-      <p class="home-sub-title">
-        <span class="inner-header-service-section">Eyebrow & Eyelash Tinting:</span><br />
+      <p class="home-sub-title title">
+        <span class="inner-header-service-section">Eyebrow & Eyelash Tinting:</span>
         There’s no better way to highlight a fresh brow clean up than with an eyebrow tint.
         Michelle customizes every tint formulation to ensure that the final result is cohesive with
         her clients’ natural colouring. For clients who are growing out their eyebrows, Michelle
@@ -187,8 +199,8 @@
         And for those who struggle with wearing mascara, Michelle offers lash tinting to
         strengthen and pop her clients natural lashes.
       </p>
-      <p class="home-sub-title">
-        <span class="inner-header-service-section">Makeup:</span><br />
+      <p class="home-sub-title title">
+        <span class="inner-header-service-section">Makeup:</span>
         As a makeup artist, Michelle uses a modest touch and an edited selection of cosmetics
         to polish her clients’ look. She focuses on highlighting and celebrating natural features
         and building confidence where her clients feel challenged. Michelle is passionate about
@@ -196,79 +208,8 @@
         bag overhauls and seasonal change ups.
       </p>
     </div>
-
-    <div class="imgbox">
-      <img class="services-center-fit" src="./assets/img/Michelle-210@2x.png" />
-      <!-- <div class="insta-feed">
-        <div class="insta-header">
-          <div><img class="insta-icon" src="./assets/img/Group 19.png" /></div>
-          <span class="insta-header-text">@michellelosbeautyartist</span>
-        </div>
-        <div class="insta-content">
-          <div class="insta-img-first-row">
-            <div>
-              <img class="insta-img" src="./assets/img/Rectangle 16.png" />
-              <p class="insta-img-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod.
-              </p>
-            </div>
-            <div>
-              <img class="insta-img" src="./assets/img/Rectangle 17.png" />
-              <p class="insta-img-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod.
-              </p>
-            </div>
-            <div>
-              <img class="insta-img" src="./assets/img/Rectangle 18.png" />
-              <p class="insta-img-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod.
-              </p>
-            </div>
-            <div>
-              <img class="insta-img" src="./assets/img/Rectangle 19.png" />
-              <p class="insta-img-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod.
-              </p>
-            </div>
-          </div>
-          <div class="insta-img-second-row">
-            <div>
-              <img class="insta-img" src="./assets/img/Rectangle 24.png" />
-              <p class="insta-img-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod.
-              </p>
-            </div>
-            <div>
-              <img class="insta-img" src="./assets/img/Rectangle 21.png" />
-              <p class="insta-img-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod.
-              </p>
-            </div>
-            <div>
-              <img class="insta-img" src="./assets/img/Rectangle 22.png" />
-              <p class="insta-img-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod.
-              </p>
-            </div>
-            <div>
-              <img class="insta-img" src="./assets/img/Rectangle 23.png" />
-              <p class="insta-img-text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </div>
   </section>
+
   <section class="contact-section section" id="contactSection">
     <div class="main-contact-div" style="transform: translate(15vw, 0); ">
       <div class="contact-div">
@@ -316,6 +257,7 @@
       </div>
     </div>
   </section>
+
   <div class="footer">
     <span class="footer-left-span" onclick="scrollHorizontal('left')"><i class="fa fa-chevron-left"
         aria-hidden="true"></i></span>

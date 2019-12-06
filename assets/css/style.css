@@ -4,7 +4,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   /* background: transparent linear-gradient(180deg, #131212 0%, #131212 59%, #131212 100%) 0% 0% no-repeat padding-box; */
-  background: #000000 0% 0% no-repeat padding-box;
+  background: #0f0f0f 0% 0% no-repeat padding-box;
 }
 .services-section::-webkit-scrollbar,.home-section::-webkit-scrollbar {
     width: 0px;
@@ -31,7 +31,7 @@ body {
   /* margin-left: 25vw; */
   /* width: 75%; */
   margin-left: 25vw;
-  width: 75%;
+  width: 75vw;
   object-fit: cover;
 }
 
@@ -39,10 +39,10 @@ body {
   /* max-width: 100%;
   max-height: 123vh; */
   /* margin-left: 27.7vw; */
-  margin-left: 10vw;
-  width: 125%;
+  margin-left: 27.7vw;
+  width: 100%;
   object-fit: cover;
-  /* height:145vh; */
+  height:100vh;
 }
 
 .logo {
@@ -111,7 +111,6 @@ body {
   position: absolute;
   top: 25vh;
   width: 32vw;
-  height: 23vh;
 }
 
 .home-section{
@@ -121,10 +120,25 @@ body {
   left: 26vw;
 }
 
-.services-section .home-title-div {
+.bio-section .home-title-div{
   left: 20vw;
+  top:33vh;
 }
 
+.services-section .home-title-div{
+  width: unset;
+  left: 15vw;
+  right:15vw;
+}
+
+.services-section .home-title,.services-section .title{
+  padding: 0;
+}
+.home-sub-title span{
+  display: flex;
+  align-items: center;
+  height: 7vh;
+}
 .threading {
   font-size: 1.8vh !important;
   color: #a2a2a2 !important;
@@ -197,8 +211,11 @@ body {
   border-radius: 0 5px 5px 0;
 }
 
-.services-section {
+.bio-section {
   transform: translate(98.7vw, -57vw);
+}
+.services-section{
+  transform: translate(197.4vw,-100vh);
 }
 
 .inner-header-service-section {

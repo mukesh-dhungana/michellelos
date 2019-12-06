@@ -20,7 +20,10 @@ var onNavLinkClick = el => {
       .parent()
       .hasClass("active")
   ) {
-    $('.active-section').find('img').css('transform', 'scale(1.1)');
+    $('.active-section').find('.background-img').css('transform', 'scale(1.1)');
+    $('.active-section').attr("id") === 'homeSection' ?
+      $('.active-section').find('.background-img').css('width', '70vw') :
+      $('.active-section').find('.background-img').css('width', '90vw');
     var scrollTo =
       parseInt($(".nav-item.active").attr("aria-label")) -
         parseInt(
@@ -32,7 +35,10 @@ var onNavLinkClick = el => {
         ? "left"
         : "right";
     var moveToEl = $($(el).attr("href"));
-    $('#' + moveToEl.attr("id")).find('img').css('transform', 'scale(1)');
+    $('#' + moveToEl.attr("id")).find('.background-img').css('transform', 'scale(1)');
+    moveToEl.attr("id") === 'homeSection' ?
+      $('#' + moveToEl.attr("id")).find('.background-img').css('width', '75vw') :
+      $('#' + moveToEl.attr("id")).find('.background-img').css('width', '100vw');
     if (moveToEl.attr("id") === "serviceSection") {
       $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadein");
     }
@@ -171,11 +177,10 @@ var scrollToPos = (el, duration) => {
         scrollTop: "linear"
       },
       complete: function () {
-        //document.getElementsByClassName('home-center-fit')[0].style.transform = "scale(1)"
         if (el.attr("id") === "serviceSection") {
           var offSetHeight = document.getElementsByClassName("section")[1]
             .offsetHeight;
-          //document.getElementsByClassName('home-center-fit')[0].style.transform = "scale(1)"
+
           // $(document.body).css("overflow-y", "scroll");
           // $(document.body).css("height", +offSetHeight - 10 + "px");
         }
@@ -228,12 +233,19 @@ $("#contactForm").on("submit", function (e) {
 window.onload = function () {
   var firstElOffSetWidth = document.getElementsByClassName("section")[0]
     .offsetWidth;
-  var offsetTop = document.getElementsByClassName("section")[1].offsetTop;
-  document.getElementsByClassName("section")[1].style.transform =
-    "translate(" + firstElOffSetWidth + "px," + -offsetTop + "px)";
-  offsetTop = document.getElementsByClassName("section")[2].offsetTop;
-  document.getElementsByClassName("section")[2].style.transform =
-    "translate(" + firstElOffSetWidth * 2 + "px," + -offsetTop + "px)";
+  var section = document.getElementsByClassName("section");
+  for (i = 1; i < section.length; i++) {
+    var offsetTop = section[i].offsetTop;
+    section[i].style.transform =
+      "translate(" + firstElOffSetWidth * i + "px," + -offsetTop + "px)";
+  }
+  // var offsetTop = document.getElementsByClassName("section")[1].offsetTop;
+  // document.getElementsByClassName("section")[1].style.transform =
+  //   "translate(" + firstElOffSetWidth + "px," + -offsetTop + "px)";
+  // offsetTop = document.getElementsByClassName("section")[2].offsetTop;
+  // document.getElementsByClassName("section")[2].style.transform =
+  //   "translate(" + firstElOffSetWidth * 2 + "px," + -offsetTop + "px)";
+
   scrollToPos($(".active-section"), 3000);
 
   var activeLi = document.getElementsByClassName("nav-item active")[0];
@@ -241,5 +253,5 @@ window.onload = function () {
     "top",
     activeLi.offsetTop + activeLi.offsetHeight + 10 + "px"
   );
-  $(".services-center-fit").css("height", document.getElementById('serviceSection').scrollHeight);
+  //$(".services-center-fit").css("height", document.getElementById('serviceSection').scrollHeight);
 };

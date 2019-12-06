@@ -131,19 +131,25 @@
   }
 } */
 @media screen and (max-width: 1199px) {
+    .menu-bar{
+        left: 35vw;
+    }
     .menu-bar ul {
         justify-content: space-around;
         padding: 0!important;
-        width: 53vw;
+        width: 60vw;
     }
     
     .nav-item {
         width: unset!important
     }
-    
+
+    .bio-section .home-title-div{
+        width: 44vw;
+    }
     .home-title-div {
-        top: 12vh;
-        width: 44vw!important;
+        top: 20vh!important;
+        padding-bottom: 2vh;
     }
     
     .services-section .home-title-div {
@@ -154,10 +160,13 @@
         font: Bold 6vh/6.8vh Didot;
     }
     
-    .home-sub-title {
+    /* .home-sub-title {
         padding: 2vh 0!important;
-    }
-    
+    } */
+    .services-section span{
+        padding-bottom: 2vh;
+        height:unset;
+      }
     .home-center-fit {
         margin-left: 0;
         width: 100vw;
@@ -234,9 +243,11 @@
     } */
     
     .home-title-div {
-        left: 20vw!important;
-        top: 23vh!important;
-        width: 51vw!important;
+        left: 10vw!important;
+        top: 20vh!important;
+        width: 55vw!important;
+        padding-bottom: 2vh;
+        height: unset;
     }
     
     .home-title {
@@ -244,10 +255,16 @@
     }
     
     .home-sub-title {
-        padding: 3vw 0!important;
+        /* padding: 3vw 0!important; */
         font-size: 1.5vh!important;
     }
-    
+    .services-section span:not(.inner-body){
+        padding: 2vh 0;
+        height:unset;
+        width: 260px;
+    /* color: #fff; */
+    line-height: 27px;
+      }
     .services-section .home-title-div {
         left: 15vw!important;
     }
