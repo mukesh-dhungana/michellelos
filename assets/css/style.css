@@ -578,3 +578,7 @@ p {
 img{
     transition: all 0.5s ease-in-out;
 }
+.nav-item:last-child{
+  width: 12vw;
+  white-space: nowrap;
+}
