@@ -20,10 +20,10 @@ var onNavLinkClick = el => {
       .parent()
       .hasClass("active")
   ) {
-    $('.active-section').find('.background-img').css('transform', 'scale(1.1)');
-    $('.active-section').attr("id") === 'homeSection' ?
-      $('.active-section').find('.background-img').css('width', '70vw') :
-      $('.active-section').find('.background-img').css('width', '90vw');
+    // $('.active-section').find('.background-img').css('transform', 'scale(1.1)');
+    // $('.active-section').attr("id") === 'homeSection' ?
+    //   $('.active-section').find('.background-img').css('width', '70vw') :
+    //   $('.active-section').find('.background-img').css('width', '90vw');
     var scrollTo =
       parseInt($(".nav-item.active").attr("aria-label")) -
         parseInt(
@@ -35,10 +35,10 @@ var onNavLinkClick = el => {
         ? "left"
         : "right";
     var moveToEl = $($(el).attr("href"));
-    $('#' + moveToEl.attr("id")).find('.background-img').css('transform', 'scale(1)');
-    moveToEl.attr("id") === 'homeSection' ?
-      $('#' + moveToEl.attr("id")).find('.background-img').css('width', '75vw') :
-      $('#' + moveToEl.attr("id")).find('.background-img').css('width', '100vw');
+    // $('#' + moveToEl.attr("id")).find('.background-img').css('transform', 'scale(1)');
+    // moveToEl.attr("id") === 'homeSection' ?
+    //   $('#' + moveToEl.attr("id")).find('.background-img').css('width', '75vw') :
+    //   $('#' + moveToEl.attr("id")).find('.background-img').css('width', '100vw');
     if (moveToEl.attr("id") === "serviceSection") {
       $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadein");
     }
@@ -101,9 +101,9 @@ var slideSection = (scrollTo, moveTo) => {
   //     -offsetTop +
   //     "px)"
   // );
-  $('.active-section').find('img').css('transform', 'scale(1.1)');
+  //$('.active-section').find('img').css('transform', 'scale(1.1)');
   var moveToSection = moveTo;
-  $('#' + moveToSection.attr("id")).find('img').css('transform', 'scale(1)');
+  //$('#' + moveToSection.attr("id")).find('img').css('transform', 'scale(1)');
   if (moveToSection.attr("id") === "serviceSection") {
     $(".insta-feed").css("animation", "2s ease 0s normal forwards 1 fadein");
   }
