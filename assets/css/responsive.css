@@ -265,7 +265,7 @@
     /* color: #fff; */
     line-height: 27px;
       }
-    .services-section .home-title-div {
+    .services-section .home-title-div,.bio-section .home-title-div {
         left: 15vw!important;
     }
     
