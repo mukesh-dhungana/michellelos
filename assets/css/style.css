@@ -6,7 +6,6 @@ body {
   /* background: transparent linear-gradient(180deg, #131212 0%, #131212 59%, #131212 100%) 0% 0% no-repeat padding-box; */
   background: #0f0f0f 0% 0% no-repeat padding-box;
   height: 100vh;
-  touch-action: none;
 }
 .services-section::-webkit-scrollbar,.home-section::-webkit-scrollbar {
     width: 0px;
