@@ -5,7 +5,6 @@ body {
   overflow-y: hidden;
   /* background: transparent linear-gradient(180deg, #131212 0%, #131212 59%, #131212 100%) 0% 0% no-repeat padding-box; */
   background: #0f0f0f 0% 0% no-repeat padding-box;
-  touch-action: none;
 }
 .services-section::-webkit-scrollbar,.home-section::-webkit-scrollbar {
     width: 0px;
@@ -572,8 +571,8 @@ p {
 .services-section ,.home-section{
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background: #0f0f0f 0% 0% no-repeat padding-box;
 }
 img{
@@ -583,3 +582,4 @@ img{
   width: 12vw;
   white-space: nowrap;
 }
+
