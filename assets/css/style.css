@@ -117,7 +117,6 @@ body {
 
 .home-section{
     position:absolute;
-    touch-action: none;
 }
 .home-section .home-title-div {
   left: 26vw;
