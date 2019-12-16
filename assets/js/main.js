@@ -275,7 +275,7 @@ window.onload = function () {
 // });
 document.addEventListener('touchmove', function (e) {
   if (e.scale !== 1) { e.preventDefault(); }
-},{passive: false});
+},false);
 
 // document.addEventListener("touchstart", function(e){
 //   e.preventDefault();
