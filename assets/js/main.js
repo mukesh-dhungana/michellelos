@@ -273,7 +273,10 @@ window.onload = function () {
 //   // special hack to prevent zoom-to-tabs gesture in safari
 //   document.body.style.zoom = 0.99;
 // });
-
+document.addEventListener('touchmove', function (e) {
+  e.preventDefault();
+  if (e.scale !== 1) { e.preventDefault(); }
+},{passive: false});
 
 document.addEventListener("touchstart", function(e){
   if(e.touches.length > 1){
@@ -281,4 +284,5 @@ document.addEventListener("touchstart", function(e){
     //you can then prevent the behavior
     e.preventDefault()
 }
-  },false);
+  },{passive: false});
+
