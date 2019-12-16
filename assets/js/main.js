@@ -273,3 +273,6 @@ document.addEventListener('gestureend', function(e) {
   // special hack to prevent zoom-to-tabs gesture in safari
   document.body.style.zoom = 0.99;
 });
+document.addEventListener('touchmove', function (event) {
+  if (event.scale !== 1) { event.preventDefault(); }
+}, false);
