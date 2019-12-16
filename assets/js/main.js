@@ -278,3 +278,15 @@ document.addEventListener('touchmove', function (event) {
   // special hack to prevent zoom-to-tabs gesture in safari
   document.body.style.zoom = 0.99;
 }, false);
+
+document.addEventListener('touchstart', function (event) {
+  e.preventDefault();
+  // special hack to prevent zoom-to-tabs gesture in safari
+  document.body.style.zoom = 0.99;
+}, false);
+
+document.addEventListener('touchend', function (event) {
+  e.preventDefault();
+  // special hack to prevent zoom-to-tabs gesture in safari
+  document.body.style.zoom = 0.99;
+}, false);
