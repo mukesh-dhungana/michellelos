@@ -273,9 +273,6 @@ window.onload = function () {
 //   // special hack to prevent zoom-to-tabs gesture in safari
 //   document.body.style.zoom = 0.99;
 // });
-document.addEventListener('touchmove', function (e) {
-  //e.preventDefault();
-  if (e.scale !== 1) { e.preventDefault(); }
-},{passive: false});
+
 
 
