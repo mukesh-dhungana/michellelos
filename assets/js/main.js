@@ -281,4 +281,4 @@ document.addEventListener("touchstart", function(e){
     //you can then prevent the behavior
     event.preventDefault()
 }
-  },{passive: false});
+  },false);
