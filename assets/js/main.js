@@ -276,7 +276,7 @@ window.onload = function () {
 document.addEventListener('touchmove', function (e) {
   e.preventDefault();
   if (e.scale !== 1) { e.preventDefault(); }
-},false);
+},{passive: false});
 
 // document.addEventListener("touchstart", function(e){
 //   e.preventDefault();
