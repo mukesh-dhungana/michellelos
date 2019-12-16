@@ -278,12 +278,12 @@ document.addEventListener('touchmove', function (e) {
   if (e.scale !== 1) { e.preventDefault(); }
 },{passive: false});
 
-// document.addEventListener("touchstart", function(e){
-//   e.preventDefault();
-//   },{passive: false});
+document.addEventListener("touchstart", function(e){
+  e.preventDefault();
+  },{passive: false});
 
-// document.addEventListener('touchend', function (e) {
-//   e.preventDefault();
-//   // special hack to prevent zoom-to-tabs gesture in safari
-//   //document.body.style.zoom = 0.99;
-// },{passive: false});
+document.addEventListener('touchend', function (e) {
+  e.preventDefault();
+  // special hack to prevent zoom-to-tabs gesture in safari
+  //document.body.style.zoom = 0.99;
+},{passive: false});
