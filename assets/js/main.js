@@ -280,10 +280,10 @@ document.addEventListener('touchmove', function (e) {
 
 document.addEventListener("touchstart", function(e){
   //e.preventDefault();
-  if(e.touches.length > 1){
-    //the event is multi-touch
-    //you can then prevent the behavior
-    //e.preventDefault()
-}
+//   if(e.touches.length > 1){
+//     //the event is multi-touch
+//     //you can then prevent the behavior
+//     //e.preventDefault()
+// }
   },{passive: false});
 
