@@ -274,6 +274,7 @@ window.onload = function () {
 //   document.body.style.zoom = 0.99;
 // });
 document.addEventListener('touchmove', function (e) {
+  e.preventDefault();
   if (e.scale !== 1) { e.preventDefault(); }
 },false);
 
