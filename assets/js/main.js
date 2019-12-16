@@ -279,6 +279,6 @@ document.addEventListener("touchstart", function(e){
   if(e.touches.length > 1){
     //the event is multi-touch
     //you can then prevent the behavior
-    event.preventDefault()
+    e.preventDefault()
 }
   },false);
